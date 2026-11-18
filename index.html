@@ -1,497 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shubham Raut · Software Engineer · DevOps · Tech Writer</title>
+<meta name="description" content="Portfolio of Shubham Raut: software engineer, web developer, DevOps engineer and tech writer. Also home of ShubhList, my movie, series and song recommendations.">
+<meta property="og:title" content="Shubham Raut · Portfolio">
+<meta property="og:description" content="Software engineer, DevOps, tech writer, and curator of ShubhList: movies, series & songs worth your time.">
+<meta property="og:image" content="img/developer_pic1.jpg">
+<link rel="icon" href="img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
+<body>
+<div id="progress"></div>
+<div id="glow"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Shubh</span>Raut</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Qualification</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#blog" class="nav-item nav-link">Blog</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="mailto:shubham.raut@students.iiit.ac.in" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+<header class="nav" id="nav">
+  <a class="logo" href="#home">Shubh<span>.</span>Raut</a>
+  <nav id="links">
+    <a href="#about">About</a><a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#ai">AI / ML</a><a href="#research">Research</a>
+    <a href="#work">Projects</a><a href="#writing">Writing</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-r">
+    <a class="reco-pill" href="#shubhlist" data-reco><i>🍿</i> What to Watch</a>
+    <button id="theme" aria-label="Toggle theme">◐</button>
+    <button id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
 
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-txt">
+    <p class="eyebrow reveal"><span class="dot"></span> Open to Opportunities</p>
+    <h1 class="reveal split">Hi, I'm <span class="grad" data-split>Shubham Raut</span></h1>
+    <p class="typed reveal"><span id="typed"></span><b class="caret"></b></p>
+    <p class="lead reveal">Machine learning engineer and IIIT Hyderabad M.Tech graduate. I build language-model and computer-vision systems, and write about what I learn.</p>
+    <div class="cta reveal">
+      <a class="btn primary" data-mag href="#ai">See my work <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn ghost" data-mag href="img/dummy-1.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn reco" data-mag href="#shubhlist"><i>🎬</i> My recommendations</a>
     </div>
-    <!-- Video Modal End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile-pic-1.ico" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Shubham Raut</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Software Engineer, Web Developer, DevOps Engineer, Tech writer</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="./img/dummy-1.pdf" target="_blank" class="btn btn-outline-light mr-5">Download CV</a>
-                        <a href="mailto:shubham.raut@students.iiit.ac.in" class="btn btn-outline-light mr-5">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="socials reveal">
+      <a href="#contact" data-mail-link aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.6 2L12 12.6 19.4 7z"/></svg></a>
+      <a href="https://github.com/shubhamraut789" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a href="https://www.linkedin.com/in/shubhamraut789/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zm7 0h3.8v1.6h.06c.53-1 1.84-2 3.8-2 4 0 4.74 2.6 4.74 6V20.5h-4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6v5H10z"/></svg></a>
+      <a href="https://medium.com/@shubhamraut789" aria-label="Medium" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 5.5c0-.3-.1-.6-.4-.8L.7 2.5V2h6l4.6 10.1L15.4 2H21v.5l-1.6 1.5c-.1.1-.2.3-.2.4v15.2c0 .2.1.3.2.4l1.6 1.5v.5h-8v-.5l1.6-1.6c.2-.2.2-.2.2-.4V7.8L10 21.9h-.6L4.1 7.8v10.4c0 .4.1.7.4 1l2.1 2.6v.5H.6v-.5l2.1-2.6c.2-.3.3-.6.3-1z" transform="translate(0 .5) scale(.95)"/></svg></a>
+      <a href="https://www.instagram.com/shubhamraut789/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
     </div>
-    <!-- Header End -->
+  </div>
+  <div class="hero-pic reveal">
+    <div class="ring"></div><div class="ring r2"></div>
+    <div class="frame"><img src="img/developer_pic1.jpg" alt="Shubham Raut" width="600" height="600"></div>
+    <span class="chip c1">👁️ Computer Vision</span><span class="chip c2">🧠 LLMs &amp; RAG</span><span class="chip c3">🐍 Python</span><span class="chip c4">✍️ Writer</span>
+  </div>
+  <a class="scroll" href="#about" aria-label="Scroll down"><span></span></a>
+</section>
 
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div id="mq"><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>PyTorch</span><span>SLMs</span><span>Python</span><span>FastAPI</span><span>OpenCV</span><span>GraphRAG</span><span>Docker</span><span>C++</span><span>SQL</span><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>PyTorch</span><span>SLMs</span><span>Python</span><span>FastAPI</span><span>OpenCV</span><span>GraphRAG</span><span>Docker</span><span>C++</span><span>SQL</span></div></div>
 
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/profile-pic-1.ico" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Software Engineer</h3>
-                    Shubham is currently pursuing master's at IIITH in computer science and engineering. He is Computer Engineering graduate from Pune University .
-                    <br /> He is a tech writer and coding enthusiast .He likes to explore new fields in Computer Science and work in a collaborative way with a team.
-                    <br />He has completed 1 year internship at PTC Softwares during his graduation.
-                    <br />Technologies🧑‍💻 he has worked with:
-                    <br />➤Frontend: HTML, CSS, JS, jQuery, ajax-calls, Bootstrap, Tailwind CSS, React Js
-                    <br />➤Backend: JSP, Node Js, Express Js
-                    <br />➤Programming languages: Python, C++, C,Java
-                    <br />➤Other: GIT, Jenkins, Maven, Bitbucket, API testing(Postman)
-                </div>
-            </div>
-        </div>
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <p class="kicker reveal">About me</p>
+  <h2 class="reveal">Engineer by training,<br><span class="grad">storyteller by habit.</span></h2>
+  <div class="about-grid">
+    <div>
+      <p class="scrub">I'm a machine learning engineer who likes taking an idea all the way from a blank notebook to something people can use. My work spans language models, retrieval and computer vision, backed by solid software and DevOps foundations.</p>
+      <p class="scrub">I graduated with an M.Tech in Computer Science from IIIT Hyderabad in July 2026, have two IEEE conference papers, and write about AI and engineering on Medium.</p>
+      <div class="stats reveal">
+        <div><b data-count="106" data-suf="M">0</b><span>Param SLM trained</span></div>
+        <div><b data-count="3" data-suf="B+">0</b><span>Training tokens</span></div>
+        <div><b data-count="2">0</b><span>IEEE papers</span></div>
+        <div><b data-count="5">0</b><span>Articles</span></div>
+      </div>
     </div>
-    <!-- About End -->
-
-
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Qualification</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Education</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master's in CSE</h5>
-                            <p class="mb-2"><strong>IIIT Hyderabad</strong> | <small>2024 - 2026</small></p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Btech in CSE</h5>
-                            <p class="mb-2"><strong>PCCOE,Pune</strong> | <small>2019 - 2023</small></p>
-                            <p>Grade: 8.52</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Class XII</h5>
-                            <p class="mb-2"><strong>Bankat Swami Mahavidyalaya</strong> | <small>2017 - 2019</small></p>
-                            <p>89.08%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">DevOps Intern</h5>
-                            <p class="mb-2"><strong>PTC</strong> | <small>June 2022 - July 2023</small></p>
-                            <p>I worked on various cron applications code maintaining and debugging also worked on CI/CD integration and automation tools like Jenkins with Maven as Build tool integrated with it.I'm passionate about streamlining software development processes and ensuring efficient and scalable infrastructures. With a strong background in Jenkins, Docker and Junit testing framework.</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Martin Program</h5>
-                            <p class="mb-2"><strong>Persistent Systems</strong> | <small>May 2022 - June 2022</small></p>
-                            <p>It was a learning internship where we came across various core Computer Science Subjects like Database Management Systems,Operating Systems,Computer Networks,Computer Architecture and Organization,Data Structure and Algorithms , Object-Oriented Programming, Compiler Design and Theory of COmputation</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web and Mobile Development Internshipr</h5>
-                            <p class="mb-2"><strong>Sparks Foundation</strong> | <small>Aug 2021 - Sept 2021</small></p>
-                            <p>Created a payment gateway integrated with Razorpay for a charitable trust NGO In this we made use of HTML,CSS, Javascript and Razorpay payment API </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="stack reveal">
+      <h3>Tech I've worked with</h3>
+      <div class="tags"><em>AI / ML</em><span>LLMs</span><span>SLMs</span><span>RAG</span><span>GraphRAG</span><span>PyTorch</span><span>Transformers</span></div>
+      <div class="tags"><em>Vision</em><span>OpenCV</span><span>Faster R-CNN</span><span>U-Net</span><span>PointNet</span><span>PCA</span></div>
+      <div class="tags"><em>Backend</em><span>FastAPI</span><span>Node.js</span><span>Express</span><span>Elasticsearch</span><span>PostgreSQL</span><span>MySQL</span></div>
+      <div class="tags"><em>Languages</em><span>Python</span><span>C++</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span></div>
+      <div class="tags"><em>DevOps</em><span>Git</span><span>Jenkins</span><span>Maven</span><span>Docker</span><span>Caddy</span></div>
     </div>
-    <!-- Qualification End -->
+  </div>
+</section>
 
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Git</h6>
-                            <h6 class="font-weight-bold">80%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">SQL</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">JavaScript</h6>
-                            <h6 class="font-weight-bold">60%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Power BI</h6>
-                            <h6 class="font-weight-bold">80%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Jenkins</h6>
-                            <h6 class="font-weight-bold">60%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">React</h6>
-                            <h6 class="font-weight-bold">60%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">C/C++</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Python</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Confluence</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Node JS</h6>
-                            <h6 class="font-weight-bold">65%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Bootstrap</h6>
-                            <h6 class="font-weight-bold">75%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Java</h6>
-                            <h6 class="font-weight-bold">65%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- JOURNEY -->
+<section id="journey" class="sec">
+  <p class="kicker reveal">Journey</p>
+  <h2 class="reveal">Education &amp; <span class="grad">Experience</span></h2>
+  <div class="two">
+    <div>
+      <h3 class="colh reveal">🎓 Education</h3>
+      <div class="tl">
+        <article class="reveal"><time>2024 – Jul 2026</time><h4>M.Tech in CSE <span class="new sm">Graduated</span></h4><p class="org">IIIT Hyderabad</p></article>
+        <article class="reveal"><time>2019 – 2023</time><h4>B.Tech in CSE</h4><p class="org">PCCOE, Pune</p><p>Grade: 8.52</p></article>
+        <article class="reveal"><time>2017 – 2019</time><h4>Class XII</h4><p class="org">Bankat Swami Mahavidyalaya</p><p>89.08%</p></article>
+      </div>
     </div>
-    <!-- Skill End -->
-
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Projects</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Publications</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Articles</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <style>
-                        .project-img {
-                            transition: transform 0.3s ease;
-                        }
-                
-                        .project-img:hover {
-                            transform: scale(1.05); /* Enlarge the image by 5% */
-                        }
-                    </style>
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="https://github.com/shubhamraut789">
-                            <img class="img-fluid rounded w-100 project-img" src="img/Project-1.jpg" alt="">
-                        </a>
-                        <div class="bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/project-1.jpg" data-lightbox="portfolio">
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="https://bit.ly/shubham_researchlink">
-                            <img class="img-fluid rounded w-100 project-img" src="img/project-2.jpg" alt="">
-                        </a>
-                        <div class="bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/project-2.jpg" data-lightbox="portfolio">
-                            </a>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="https://medium.com/@shubhamraut789">
-                            <img class="img-fluid rounded w-100 project-img" src="img/project-3.jpg" alt="">
-                        </a>
-                        <div class="bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/project-3.jpg" data-lightbox="portfolio">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+      <h3 class="colh reveal">💼 Experience</h3>
+      <div class="tl">
+        <article class="reveal"><time>Present</time><h4>Machine Learning Engineer <span class="new sm">Current</span></h4><p class="org">Zenerative Minds</p><p>Building applied machine-learning systems.</p></article>
+        <article class="reveal"><time>Jun 2022 – Jul 2023</time><h4>DevOps Intern</h4><p class="org">PTC</p><p>Maintained and debugged cron applications, and worked on CI/CD integration and automation with Jenkins and Maven. Strong grounding in Jenkins, Docker and the JUnit testing framework, with a focus on streamlined, scalable infrastructure.</p></article>
+        <article class="reveal"><time>May 2022 – Jun 2022</time><h4>Martin Program</h4><p class="org">Persistent Systems</p><p>A learning internship across core CS: DBMS, operating systems, computer networks, computer architecture, data structures and algorithms, OOP, compiler design and theory of computation.</p></article>
+        <article class="reveal"><time>Aug 2021 – Sep 2021</time><h4>Web &amp; Mobile Development Intern</h4><p class="org">The Sparks Foundation</p><p>Built a Razorpay payment gateway for a charitable trust NGO using HTML, CSS, JavaScript and the Razorpay API.</p></article>
+      </div>
     </div>
-    <!-- Portfolio End -->
+  </div>
+</section>
 
-
-    <!-- Blog Start -->
-    <div class="container-fluid pt-5" id="blog">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/gate img.jpeg" alt="">
-                    </div>
-                    <h5 class="font-weight-medium mb-4">All About GATE Preparation</h5>
-                    <a class="btn btn-sm btn-outline-primary py-2" href="https://medium.com/@shubhamraut789/all-about-gate-preparation-a2bceea0ef34">Read More</a>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/The-Menu.webp" alt="">
-                    </div>
-                    <h5 class="font-weight-medium mb-4">“The Menu(2022)” movie review and film summary</h5>
-                    <a class="btn btn-sm btn-outline-primary py-2" href="https://medium.com/@shubhamraut789/the-menu-2022-movie-review-and-film-summary-c713acea60f1">Read More</a>
-                </div>
-            </div>
-        </div>
+<!-- SKILLS: SOLAR SYSTEM -->
+<section id="skills" class="solar-wrap">
+  <div class="solar-pin">
+    <div class="solar-head">
+      <p class="kicker">Skills</p>
+      <h2>My <span class="grad">skill system</span></h2>
+      <p class="solar-hint">Scroll to open each orbit ↓</p>
     </div>
-    <!-- Blog End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="solar" id="solar" aria-label="Skills shown as orbits around a sun">
+      <div class="sun"><b>Skills</b></div>
     </div>
-    <!-- Contact End -->
+    <ul class="legend" id="legend"></ul>
+  </div>
+</section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/shubhamraut789/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/shubhamraut789/"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Help</a>
-            </div>
-            </p>
-        </div>
+<!-- AI / ML -->
+<section id="ai" class="sec">
+  <p class="kicker reveal">AI / ML &amp; Computer Vision</p>
+  <h2 class="reveal">From tokens to <span class="grad">pixels.</span></h2>
+  <p class="sec-lead reveal">Language models, retrieval and computer vision: trained, evaluated and shipped as working systems.</p>
+  <div class="domains">
+    <div class="dom reveal tilt"><span class="ico">🧠</span><h4>Language models</h4><p>Pretraining, fine-tuning, RAG and LLM applications.</p><div class="tg"><i>Gemma SLM</i><i>Geometry SME</i><i>Compliance Clerk</i></div></div>
+    <div class="dom reveal tilt"><span class="ico">👁️</span><h4>Computer vision</h4><p>Detection, segmentation, depth, 3D point clouds and image processing.</p><div class="tg"><i>Multi-task CV</i><i>PCA faces</i><i>Seam carving</i></div></div>
+    <div class="dom reveal tilt"><span class="ico">⚙️</span><h4>Applied ML</h4><p>Unsupervised matching, document AI and natural-language-to-SQL.</p><div class="tg"><i>Reconciliation</i><i>Text-to-Query</i><i>Memory bot</i></div></div>
+  </div>
+
+  <div class="cases">
+    <article class="case c-slm" id="case-slm">
+      <div class="case-body">
+        <span class="new">Project · Mini-project</span>
+        <h3>Gemma SLM<small>A multilingual small language model for low-resource Indian languages</small></h3>
+        <p>Trained a SentencePiece tokeniser with effective token coverage across English, Marathi and Konkani. Built a dense Gemma-style autoregressive model (106M parameters) and pretrained it on 3B+ tokens, then fine-tuned it for sentence formation and English-to-Konkani translation.</p>
+        <div class="kpis"><div><b data-count="106" data-suf="M">0</b><span>parameters</span></div><div><b data-count="3" data-suf="B+">0</b><span>tokens</span></div><div><b data-count="3">0</b><span>languages</span></div></div>
+        <div class="steps"><i>Tokeniser</i><i>Pretraining</i><i>Fine-tuning</i><i>L1 → L3 translation</i></div>
+        <div class="tg"><i>PyTorch</i><i>SentencePiece</i><i>Gemma architecture</i><i>Kaggle GPUs</i></div>
+        <a class="btn primary" href="https://github.com/shubhamraut789/Gemma_SLM" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="case-vis langs" aria-hidden="true">
+        <div class="lang"><small>L1</small><b>English</b><span style="--w:92%"></span></div>
+        <div class="lang"><small>L2</small><b class="dv">मराठी</b><span style="--w:70%"></span></div>
+        <div class="lang"><small>L3</small><b class="dv">कोंकणी</b><span style="--w:46%"></span></div>
+        <p class="vis-note">Task: English → Konkani translation</p>
+      </div>
+    </article>
+    <article class="case c-geo" id="case-geo">
+      <div class="case-body">
+        <span class="new">Project · Team major project</span>
+        <h3>Geometry SME Agent<small>A RAG-based intelligent tutoring system for K-12 geometry</small></h3>
+        <p>A tutoring system that combines hierarchical retrieval with agentic workflows: three-level chunking, hybrid vector and keyword search, BGE reranking and Gemini for answers, plus quiz generation, PDF/DOCX/PPT export and email delivery behind JWT role-based access.</p>
+        <div class="kpis"><div><b data-count="15" data-suf="–20%">0</b><span>retrieval gain from reranking*</span></div><div><b>&lt;2s</b><span>response time*</span></div><div><b data-count="96.5" data-dec="1" data-suf="%">0</b><span>workflow success*</span></div></div>
+        <div class="steps"><i>Router</i><i>Hierarchical RAG</i><i>BGE rerank</i><i>Gemini</i><i>Tools</i></div>
+        <div class="tg"><i>FastAPI</i><i>Elasticsearch</i><i>sentence-transformers</i><i>JWT</i><i>Docker</i></div>
+        <p class="fine">*As reported in the project README.</p>
+        <a class="btn primary" href="https://github.com/shubhamraut789/geometry-sme-system" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="case-vis arch" aria-hidden="true">
+        <div class="a-node">👩‍🏫 Teacher / Student</div><i></i>
+        <div class="a-node">🔐 FastAPI + JWT</div><i></i>
+        <div class="a-node hot">🔎 Hierarchical RAG<small>2048 · 384 · 128 chunks</small></div><i></i>
+        <div class="a-node">🧠 Gemini</div><i></i>
+        <div class="a-node">📄 PDF · DOCX · PPT · Email</div>
+      </div>
+    </article>
+    <article class="case c-cv" id="case-cv">
+      <div class="case-body">
+        <span class="new">Project · Computer vision</span>
+        <h3>Multi-Task CV Pipeline<small>Detection, segmentation, depth and 3D point clouds in PyTorch</small></h3>
+        <p>Extended Faster R-CNN to predict oriented bounding boxes using angle regression with multi-bin classification, and built a multi-task U-Net that does semantic segmentation and depth estimation together. Implemented PointNet for 3D point-cloud classification, with critical-point extraction and permutation-invariance checks.</p>
+        <div class="kpis"><div><b>3</b><span>vision tasks</span></div><div><b>mAP</b><span>detection</span></div><div><b>mIoU · RMSE</b><span>segmentation · depth</span></div></div>
+        <div class="steps"><i>Oriented detection</i><i>Seg + depth</i><i>PointNet</i><i>W&amp;B tracking</i></div>
+        <div class="tg"><i>PyTorch</i><i>torchvision</i><i>OpenCV</i><i>Weights &amp; Biases</i></div>
+        <a class="btn primary" data-mag href="https://github.com/shubhamraut789/Multi-Task-CV-Pipeline" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="case-vis cvvis" aria-hidden="true">
+        <div class="cv-panel"><svg viewBox="0 0 120 80"><rect x="0" y="0" width="120" height="80" fill="none"/><g class="obb"><rect x="38" y="26" width="46" height="24" rx="2"/><path d="M38 26l46 24M38 50l46-24" opacity=".25"/></g></svg><small>Oriented boxes</small></div>
+        <div class="cv-panel depth"><div></div><small>Segmentation + depth</small></div>
+        <div class="cv-panel pc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><small>Point cloud</small></div>
+      </div>
+    </article>
+  </div>
+
+  <a class="feature reveal" href="https://medium.com/@shubhamraut789/beyond-vector-search-is-graph-the-next-retrieval-layer-5d03205753bf" target="_blank" rel="noopener">
+    <div class="f-art"><div class="g"><u></u><u></u><u></u><u></u><u></u><u></u></div></div>
+    <div class="f-txt">
+      <span class="new">NEW · Sep 2026</span>
+      <h3>Beyond Vector Search: Is Graph the Next Retrieval Layer?</h3>
+      <p>Why GraphRAG exists, how indexing, retrieval and generation work, what the research says about multi-hop tasks, and a practical checklist for choosing vector, graph or hybrid.</p>
+      <blockquote>Vector RAG finds relevant information, GraphRAG finds the connections between that information.</blockquote>
+      <em>Read the article →</em>
     </div>
-    <!-- Footer End -->
+  </a>
+</section>
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+<!-- RESEARCH -->
+<section id="research" class="sec">
+  <p class="kicker reveal">Research</p>
+  <h2 class="reveal">Published <span class="grad">work</span></h2>
+  <p class="sec-lead reveal">Two IEEE conference papers in computer vision.</p>
+  <div class="papers" id="papers">
+    <a class="paper p1" href="https://ieeexplore.ieee.org/document/9752286" target="_blank" rel="noopener">
+      <div class="p-top"><span class="ieee">IEEE <b>Xplore</b></span><span class="p-tag">Conference publication</span></div>
+      <div class="p-art xray" aria-hidden="true"><div class="lungs"><u></u><u></u></div><i></i></div>
+      <h3>Blending of Contrast Enhancement Techniques for Chest X-Ray Pneumonia Images</h3>
+      <p class="p-meta">Computer vision · Medical imaging</p>
+      <em>Read on IEEE Xplore →</em>
+    </a>
+    <a class="paper p2" href="https://ieeexplore.ieee.org/document/10085231" target="_blank" rel="noopener">
+      <div class="p-top"><span class="ieee">IEEE <b>Xplore</b></span><span class="p-tag">Conference publication</span></div>
+      <div class="p-art traffic" aria-hidden="true"><div class="road"></div><span class="car c1"></span><span class="car c2"></span><span class="tl-light"><u></u><u></u><u></u></span></div>
+      <h3>Proposed Approach for Dynamic Automobile Traffic Management System</h3>
+      <p class="p-meta">Computer vision</p>
+      <em>Read on IEEE Xplore →</em>
+    </a>
+  </div>
+  <div class="cta center reveal"><a class="btn ghost" href="https://bit.ly/shubham_researchlink" target="_blank" rel="noopener">All publications →</a></div>
+</section>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- WORK -->
+<section id="work" class="sec">
+  <p class="kicker reveal">Projects</p>
+  <h2 class="reveal">More things I've <span class="grad">built</span></h2>
+  <div class="filters reveal" id="repoFilters"></div>
+  <div class="repos" id="repos"></div>
+  <div class="cta center reveal"><a class="btn ghost" data-mag href="https://github.com/shubhamraut789?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub →</a></div>
+</section>
 
+<!-- WRITING -->
+<section id="writing" class="sec">
+  <p class="kicker reveal">Blog</p>
+  <h2 class="reveal">Latest <span class="grad">writing</span></h2>
+  <div class="posts">
+    <a class="post big reveal tilt" href="https://medium.com/@shubhamraut789/pull-the-plug-building-a-crash-safe-self-healing-office-server-with-postgresql-wal-caddy-and-fa29f8765807" target="_blank" rel="noopener">
+      <div class="art art-plug"><span>⏻</span></div>
+      <div><span class="new">NEW · Nov 2026</span><h4>Pull the Plug: Building a Crash-Safe, Self-Healing Office Server</h4><p>Turning a small team's Node.js and PostgreSQL app into real infrastructure on one office PC, with PostgreSQL WAL, Caddy and restic, plus an honest list of limitations.</p><div class="tg"><i>postgresql</i><i>devops</i><i>self-hosting</i><i>windows-server</i></div><em>Read more →</em></div>
+    </a>
+    <a class="post big reveal tilt" href="https://medium.com/@shubhamraut789/beyond-vector-search-is-graph-the-next-retrieval-layer-5d03205753bf" target="_blank" rel="noopener">
+      <div class="art art-graph"><div class="g"><u></u><u></u><u></u><u></u><u></u><u></u></div></div>
+      <div><span class="new">Sep 2026</span><h4>Beyond Vector Search: Is Graph the Next Retrieval Layer?</h4><p>GraphRAG explained: knowledge graphs, community summaries, and when graphs beat (or don't beat) plain vector search.</p><div class="tg"><i>graphrag</i><i>llms</i><i>vector-search</i><i>knowledge-graph</i></div><em>Read more →</em></div>
+    </a>
+    <a class="post reveal tilt" href="https://medium.com/@shubhamraut789/rewriting-stl-data-structures-from-scratch-lessons-in-efficiency-089a32d0dc39" target="_blank" rel="noopener">
+      <div class="art art-stl"><span>{ }</span></div>
+      <div><small>Jul 2025 · C++</small><h4>Rewriting STL Data Structures from Scratch</h4><p>Re-implementing vector, list, map and more, and comparing them with the standard library.</p><em>Read more →</em></div>
+    </a>
+    <a class="post reveal tilt" href="https://medium.com/@shubhamraut789/all-about-gate-preparation-a2bceea0ef34" target="_blank" rel="noopener">
+      <img src="img/gate.jpeg" alt="GATE preparation" loading="lazy">
+      <div><small>Sep 2024 · Guide</small><h4>All About GATE Preparation</h4><em>Read more →</em></div>
+    </a>
+    <a class="post reveal tilt" href="https://medium.com/@shubhamraut789/the-menu-2022-movie-review-and-film-summary-c713acea60f1" target="_blank" rel="noopener">
+      <img src="img/The-Menu.webp" alt="The Menu (2022)" loading="lazy">
+      <div><small>Jul 2023 · Film review</small><h4>“The Menu (2022)”: movie review and film summary</h4><em>Read more →</em></div>
+    </a>
+  </div>
+  <div class="cta center reveal"><a class="btn ghost" href="https://medium.com/@shubhamraut789" target="_blank" rel="noopener">All articles on Medium →</a></div>
+</section>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- SHUBHLIST FEATURE -->
+<section id="shubhlist" class="sec">
+  <div class="sl reveal">
+    <div class="sl-glow"></div>
+    <div class="sl-txt">
+      <p class="kicker">Off the clock</p>
+      <h2>🍿 <span class="grad">ShubhList</span><br>Movies, series &amp; songs I swear by</h2>
+      <p>A hand-picked, animated collection of psychological thrillers, feel-good rom-coms, gripping police dramas, all-time classics and songs you can play right on the page. Every title comes with a poster, a quick summary and the best place to watch it.</p>
+      <p class="sl-note">Got a gem I'm missing? Suggest it there and I'll review it.</p>
+      <div class="cta">
+        <a class="btn primary" id="slBtn" href="https://shubhamraut789.github.io/shubhlist/" data-reco target="_blank" rel="noopener">Open ShubhList <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="sl-cards" aria-hidden="true">
+      <div class="mini m1"><span>🎬</span><b>Movies</b><small>82 picks</small></div>
+      <div class="mini m2"><span>📺</span><b>Series</b><small>50 picks</small></div>
+      <div class="mini m3"><span>🎧</span><b>Songs</b><small>Play on click</small></div>
+      <div class="mini m4"><span>📖</span><b>Reads</b><small>Good books</small></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <p class="kicker reveal">Contact</p>
+  <h2 class="reveal">Let's build <span class="grad">something.</span></h2>
+  <div class="contact-grid">
+    <div class="reveal contact-l">
+      <p>Open to ML engineering roles, collaborations and good conversations about AI, cinema or music.</p>
+      <a class="mail-big" id="mailBig" href="#" data-mag><span class="mail-ic">✉</span><span id="mailTxt">Email me</span></a>
+      <button class="copy" id="copyMail" type="button">Copy address</button>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/shubhamraut789/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zm7 0h3.8v1.6h.06c.53-1 1.84-2 3.8-2 4 0 4.74 2.6 4.74 6V20.5h-4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6v5H10z"/></svg></a>
+        <a href="https://github.com/shubhamraut789" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+        <a href="https://medium.com/@shubhamraut789" aria-label="Medium" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 5.5c0-.3-.1-.6-.4-.8L.7 2.5V2h6l4.6 10.1L15.4 2H21v.5l-1.6 1.5c-.1.1-.2.3-.2.4v15.2c0 .2.1.3.2.4l1.6 1.5v.5h-8v-.5l1.6-1.6c.2-.2.2-.2.2-.4V7.8L10 21.9h-.6L4.1 7.8v10.4c0 .4.1.7.4 1l2.1 2.6v.5H.6v-.5l2.1-2.6c.2-.3.3-.6.3-1z" transform="translate(0 .5) scale(.95)"/></svg></a>
+        <a href="https://www.instagram.com/shubhamraut789/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+      </div>
+    </div>
+    <form class="reveal cform" id="cform" novalidate>
+      <label>Your name<input name="n" autocomplete="name" required placeholder="Jane Doe"></label>
+      <label>Subject<input name="s" placeholder="Let's work together"></label>
+      <label>Message<textarea name="m" rows="5" required placeholder="Tell me a little about it..."></textarea></label>
+      <button class="btn primary" type="submit" data-mag>Open in my email app <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="fine" id="cnote">Opens your email app with the message ready to send.</p>
+    </form>
+  </div>
+</section>
+</main>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<footer><p>© <span id="yr"></span> Shubham Raut · Built with plain HTML, CSS &amp; JS · <a href="#shubhlist" data-reco>🍿 ShubhList</a></p></footer>
+<a id="top" href="#home" aria-label="Back to top">↑</a>
+<script src="js/main.js"></script>
 </body>
-
 </html>
